@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGGAME", "Assembly-CSharp.csproj", "{96656966-3D9D-66E9-2B3D-6FE1DB39DFED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGGAME", "Assembly-CSharp-Editor.csproj", "{979CA2E2-D726-8595-1D1D-1E6FDC477356}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96656966-3D9D-66E9-2B3D-6FE1DB39DFED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96656966-3D9D-66E9-2B3D-6FE1DB39DFED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96656966-3D9D-66E9-2B3D-6FE1DB39DFED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96656966-3D9D-66E9-2B3D-6FE1DB39DFED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{979CA2E2-D726-8595-1D1D-1E6FDC477356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{979CA2E2-D726-8595-1D1D-1E6FDC477356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{979CA2E2-D726-8595-1D1D-1E6FDC477356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{979CA2E2-D726-8595-1D1D-1E6FDC477356}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
