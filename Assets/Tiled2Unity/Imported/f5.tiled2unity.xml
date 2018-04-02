@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 01/04/2018 7:41:21-->
+<Tiled2Unity version="1.0.13.2">
+  <AssignMaterial mesh="f5_mesh_0001" material="Overworld" />
+  <Prefab name="f5" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="2" numTilesHigh="4" tileWidth="16" tileHeight="16" exportScale="0.0625" mapWidthInPixels="32" mapHeightInPixels="64" backgroundColor="#808080">
+    <GameObject name="Capa de Patrones 1" x="0" y="0" z="0">
+      <TileLayer offsetX="0" offsetY="0" />
+      <GameObject name="Overworld" x="0" y="0" mesh="f5_mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
+    </GameObject>
+  </Prefab>
+  <ImportMesh filename="f5_mesh_0001.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2Y1X21lc2hfMDAwMS5vYmonDQoNCiMgVmVydGljZXMgKENvdW50ID0gMjQpDQp2IDAgLTEgMA0KdiAtMSAtMSAwDQp2IC0xIDAgMA0KdiAwIDAgMA0KdiAtMSAtMSAwDQp2IC0yIC0xIDANCnYgLTIgMCAwDQp2IC0xIDAgMA0KdiAwIC0yIDANCnYgLTEgLTIgMA0KdiAtMSAtMSAwDQp2IDAgLTEgMA0KdiAtMSAtMiAwDQp2IC0yIC0yIDANCnYgLTIgLTEgMA0KdiAtMSAtMSAwDQp2IDAgLTMgMA0KdiAtMSAtMyAwDQp2IC0xIC0yIDANCnYgMCAtMiAwDQp2IDAgLTQgMA0KdiAtMSAtNCAwDQp2IC0xIC0zIDANCnYgMCAtMyAwDQoNCiMgVGV4dHVyZSBjb29yaWRpbmF0ZXMgKENvdW50ID0gMTUpDQp2dCAwLjI3NSAwLjE2NjY2NjcNCnZ0IDAuMyAwLjE2NjY2NjcNCnZ0IDAuMyAwLjE5NDQ0NDQNCnZ0IDAuMjc1IDAuMTk0NDQ0NA0KdnQgMC4zMjUgMC4xNjY2NjY3DQp2dCAwLjMyNSAwLjE5NDQ0NDQNCnZ0IDAuMjc1IDAuMTM4ODg4OQ0KdnQgMC4zIDAuMTM4ODg4OQ0KdnQgMC4zMjUgMC4xMzg4ODg5DQp2dCAwLjA3NSAwLjExMTExMTENCnZ0IDAuMSAwLjExMTExMTENCnZ0IDAuMSAwLjEzODg4ODkNCnZ0IDAuMDc1IDAuMTM4ODg4OQ0KdnQgMC4wNzUgMC4wODMzMzMzMQ0KdnQgMC4xIDAuMDgzMzMzMzENCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIE1lc2ggZGVzY3JpcHRpb24NCmcgZjVfbWVzaF8wMDAxDQoNCiMgRmFjZXMNCmYgMS8xLzEgMi8yLzEgMy8zLzEgNC80LzEKZiA1LzIvMSA2LzUvMSA3LzYvMSA4LzMvMQpmIDkvNy8xIDEwLzgvMSAxMS8yLzEgMTIvMS8xCmYgMTMvOC8xIDE0LzkvMSAxNS81LzEgMTYvMi8xCmYgMTcvMTAvMSAxOC8xMS8xIDE5LzEyLzEgMjAvMTMvMQpmIDIxLzE0LzEgMjIvMTUvMSAyMy8xMS8xIDI0LzEwLzEKDQo=</ImportMesh>
+  <InternalTexture assetPath="Assets/gfx/Overworld.png" materialName="Overworld" />
+</Tiled2Unity>
