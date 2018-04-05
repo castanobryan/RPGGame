@@ -90,7 +90,7 @@ public class Player : MonoBehaviour {
 
 		// Buscamos el estado actual mirando la información del animador
 		AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-		bool attacking = stateInfo.IsName("Player_Attack");
+		bool attacking = stateInfo.IsName("p_attack");
 
 		// Detectamos el ataque, tiene prioridad por lo que va abajo del todo
 		if (Input.GetKeyDown("space") && !attacking ){  
@@ -110,7 +110,7 @@ public class Player : MonoBehaviour {
 	void SlashAttack () {
 		// Buscamos el estado actual mirando la información del animador
 		AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-		bool charging = stateInfo.IsName("Player_Slash");
+		bool charging = stateInfo.IsName("p_slash");
 
 		// Ataque a distancia
 		if (Input.GetKeyDown(KeyCode.F)){ 
