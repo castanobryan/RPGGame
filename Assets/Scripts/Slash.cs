@@ -22,6 +22,8 @@ public class Slash : MonoBehaviour {
 			Destroy(gameObject);
 		} else if (col.tag != "Player" && col.tag != "Attack"){ 
 			Destroy(gameObject);
+			if (col.tag == "Enemy") col.SendMessage ("Attacked");
+			Destroy (gameObject);
 		}
 	}
 
