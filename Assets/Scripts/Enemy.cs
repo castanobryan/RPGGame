@@ -133,6 +133,7 @@ public class Enemy : MonoBehaviour {
 	///--- Gestión del ataque, restamos una vida
 	public void Attacked(){
 		if (--hp <= 0) Destroy(gameObject);
+
 	}
 
 	///---  Dibujamos las vidas del enemigo en una barra 

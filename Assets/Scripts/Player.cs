@@ -9,6 +9,10 @@ public class Player : MonoBehaviour {
 	public float speed = 4f;
 	public GameObject initialMap; 
 	public GameObject slashPrefab;
+	public AudioClip SwordSound;
+	public AudioClip SwordCharge;
+	public AudioClip SwordSlash;
+	private AudioSource AudioPlayer;
 
 	Animator anim;
 	Rigidbody2D rb2d;
@@ -28,6 +32,7 @@ public class Player : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D>();
+		AudioPlayer = GetComponent<AudioSource> ();
 
 		//* Recuperamos el collider de ataque y lo desactivamos
 		attackCollider = transform.GetChild(0).GetComponent<CircleCollider2D>();
@@ -95,6 +100,8 @@ public class Player : MonoBehaviour {
 		// Detectamos el ataque, tiene prioridad por lo que va abajo del todo
 		if (Input.GetKeyDown("space") && !attacking ){  
 			anim.SetTrigger("attacking");
+			AudioPlayer.clip = SwordSound;
+			AudioPlayer.Play ();
 		}
 
 		// Activamos el collider a la mitad de la animación de ataque
@@ -116,11 +123,18 @@ public class Player : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.F)){ 
 			anim.SetTrigger("charging");
 			aura.AuraStart();
+
+			AudioPlayer.clip = SwordCharge;
+			AudioPlayer.Play ();
+			AudioPlayer.loop = true;
 		} else if (Input.GetKeyUp(KeyCode.F)){ 
+			AudioPlayer.loop = false;
 			anim.SetTrigger("attacking");
 			if (aura.IsLoaded()) {
 				// Para que se mueva desde el principio tenemos que asignar un
 				// valor inicial al movX o movY en el edtitor distinto a cero
+				AudioPlayer.clip = SwordSlash;
+				AudioPlayer.Play ();
 				float angle = Mathf.Atan2(
 					anim.GetFloat("movY"), 
 					anim.GetFloat("movX")

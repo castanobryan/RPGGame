@@ -10,10 +10,13 @@ public class EnemyAttack : MonoBehaviour {
 	GameObject player;   // Recuperamos al objeto jugador
 	Rigidbody2D rb2d;    // Recuperamos el componente de cuerpo rígido
 	Vector3 target, dir; // Vectores para almacenar el objetivo y su dirección
+	//public AudioClip PlayerHit;
+	//private AudioSource AudioPlayer;
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
 		rb2d = GetComponent<Rigidbody2D>();
+		//AudioPlayer = GetComponent<AudioSource> ();
 
 		// Recuperamos posición del jugador y la dirección normalizada
 		if (player != null){
@@ -33,6 +36,8 @@ public class EnemyAttack : MonoBehaviour {
 		// Si chocamos contra el jugador o un ataque la borramos
 		if (col.transform.tag == "Player" || col.transform.tag == "Attack"){
 			Destroy(gameObject); 
+			//AudioPlayer.clip = PlayerHit;
+			//AudioPlayer.Play ();
 		}
 	}
 
