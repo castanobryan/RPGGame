@@ -12,6 +12,7 @@ public class Warping : MonoBehaviour
 	// Para almacenar el mapa de destino
 	public GameObject targetMap;
 
+
 	// Para controlar si empieza o no la transición
 	bool start = false;
 	// Para controlar si la transición es de entrada o salida

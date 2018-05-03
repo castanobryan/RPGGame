@@ -27,7 +27,7 @@ public class msgNeigh : MonoBehaviour {
 	public void Boton(){
 		//do {
 		index++;
-		if (index == 3) {
+		if (index == 12) {
 			//msgPanel.SetActive (false);
 			Destroy (Barrera);
 			Destroy (Collider);

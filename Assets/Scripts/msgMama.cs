@@ -7,6 +7,7 @@ public class msgMama : MonoBehaviour {
 	[SerializeField] GameObject msgPanel;
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
+	//[SerializeField] GameObject msgComplete;
 
 	int index = 0;
 	public string[] msg;
@@ -27,12 +28,11 @@ public class msgMama : MonoBehaviour {
 	public void Boton(){
 		//do {
 		index++;
-		if (index == 3) {
+		if (index == 22) {
 			//msgPanel.SetActive (false);
 			Destroy (Barrera);
 			Destroy (Collider);
 			Destroy (msgPanel);
-
 		}
 
 		//} while (index<=27);

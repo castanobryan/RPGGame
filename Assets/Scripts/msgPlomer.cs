@@ -27,7 +27,7 @@ public class msgPlomer : MonoBehaviour {
 	public void Boton(){
 		//do {
 		index++;
-		if (index == 3) {
+		if (index == 14) {
 			//msgPanel.SetActive (false);
 			Destroy (Barrera);
 			Destroy (Collider);

@@ -7,11 +7,14 @@ public class msgAbuelita : MonoBehaviour {
 	[SerializeField] GameObject msgPanel;
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
+	private AudioSource AudioPlayer;
+	public AudioClip Win;
 
 	int index = 0;
 	public string[] msg;
 	// Use this for initialization
 	void Start () {
+		AudioPlayer = GetComponent<AudioSource> ();
 
 	}
 
@@ -27,8 +30,10 @@ public class msgAbuelita : MonoBehaviour {
 	public void Boton(){
 		//do {
 		index++;
-		if (index == 3) {
+		if (index == 17) {
 			//msgPanel.SetActive (false);
+			AudioPlayer.clip = Win;
+			AudioPlayer.Play ();
 			Destroy (Barrera);
 			Destroy (Collider);
 			Destroy (msgPanel);
