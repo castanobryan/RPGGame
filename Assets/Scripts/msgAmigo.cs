@@ -7,6 +7,8 @@ public class msgAmigo : MonoBehaviour {
 	[SerializeField] GameObject msgPanel;
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
+	[SerializeField] GameObject NPC;
+	[SerializeField] GameObject Anim;
 
 	int index = 0;
 	public string[] msg;
@@ -32,6 +34,8 @@ public class msgAmigo : MonoBehaviour {
 			Destroy (Barrera);
 			Destroy (Collider);
 			Destroy (msgPanel);
+			Destroy (NPC);
+			Anim.SetActive (true);
 
 		}
 

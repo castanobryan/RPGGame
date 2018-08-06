@@ -54,6 +54,14 @@ public class DetectNPX : MonoBehaviour {
 		}
 	}
 
+	public void Atras(){
+		if (actualNPC) {
+			actualNPC.GetComponent<msgNPC> ().ButtonAtras ();
+			string msg = actualNPC.GetComponent<msgNPC> ().GetMsg ();
+			msgText.text = msg;
+		}
+	}
+
 	public void BotonMama(){
 		if(actualNPC){
 			actualNPC.GetComponent<msgMama> ().Boton ();
@@ -61,4 +69,5 @@ public class DetectNPX : MonoBehaviour {
 			msgText.text = msg;
 		}
 	}
+		
 }
