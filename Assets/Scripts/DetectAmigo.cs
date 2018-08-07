@@ -47,4 +47,12 @@ public class DetectAmigo : MonoBehaviour {
 		}
 	}
 
+	public void Atras(){
+		if (actualNPC) {
+			actualNPC.GetComponent<msgAmigo> ().ButtonAtras ();
+			string msg = actualNPC.GetComponent<msgAmigo> ().GetMsg ();
+			msgText.text = msg;
+		}
+	}
+
 }

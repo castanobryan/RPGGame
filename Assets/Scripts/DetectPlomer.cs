@@ -47,4 +47,12 @@ public class DetectPlomer : MonoBehaviour {
 		}
 	}
 
+	public void Atras(){
+		if (actualNPC) {
+			actualNPC.GetComponent<msgPlomer> ().ButtonAtras ();
+			string msg = actualNPC.GetComponent<msgPlomer> ().GetMsg ();
+			msgText.text = msg;
+		}
+	}
+
 }

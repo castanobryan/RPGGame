@@ -7,6 +7,9 @@ public class msgPlomer : MonoBehaviour {
 	[SerializeField] GameObject msgPanel;
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
+	[SerializeField] GameObject BotonAtras;
+	[SerializeField] GameObject Plomer;
+	[SerializeField] GameObject Prota;
 
 	int index = 0;
 	public string[] msg;
@@ -27,6 +30,16 @@ public class msgPlomer : MonoBehaviour {
 	public void Boton(){
 		//do {
 		index++;
+		BotonAtras.SetActive (true);
+
+		if (index % 2 == 0) {
+			Prota.SetActive (true);
+			Plomer.SetActive (false);
+		} else {
+			Prota.SetActive (false);
+			Plomer.SetActive (true);
+		}
+
 		if (index == 14) {
 			//msgPanel.SetActive (false);
 			Destroy (Barrera);
@@ -36,6 +49,26 @@ public class msgPlomer : MonoBehaviour {
 		}
 
 		//} while (index<=27);
+
+	}
+
+	public void ButtonAtras(){
+		index--;
+
+		if (index % 2 == 0) {
+			Prota.SetActive (true);
+			Plomer.SetActive (false);
+		} else {
+			Prota.SetActive (false);
+			Plomer.SetActive (true);
+		}
+
+		if (index > 0) {
+			BotonAtras.SetActive (true);
+		} else {
+			BotonAtras.SetActive (false);
+		}
+
 
 	}
 }

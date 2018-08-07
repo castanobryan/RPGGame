@@ -47,4 +47,12 @@ public class DetectNeigh : MonoBehaviour {
 		}
 	}
 
+	public void Atras(){
+		if (actualNPC) {
+			actualNPC.GetComponent<msgNeigh> ().ButtonAtras ();
+			string msg = actualNPC.GetComponent<msgNeigh> ().GetMsg ();
+			msgText.text = msg;
+		}
+	}
+
 }

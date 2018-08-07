@@ -47,4 +47,12 @@ public class DetectDiosa2 : MonoBehaviour {
 		}
 	}
 
+	public void Atras(){
+		if (actualNPC) {
+			actualNPC.GetComponent<msgDiosa2> ().ButtonAtras ();
+			string msg = actualNPC.GetComponent<msgDiosa2> ().GetMsg ();
+			msgText.text = msg;
+		}
+	}
+
 }

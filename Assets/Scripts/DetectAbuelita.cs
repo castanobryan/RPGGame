@@ -39,6 +39,14 @@ public class DetectAbuelita : MonoBehaviour {
 
 	}
 
+	public void Atras(){
+		if (actualNPC) {
+			actualNPC.GetComponent<msgAbuelita> ().ButtonAtras ();
+			string msg = actualNPC.GetComponent<msgAbuelita> ().GetMsg ();
+			msgText.text = msg;
+		}
+	}
+
 	public void Boton(){
 		if(actualNPC){
 			actualNPC.GetComponent<msgAbuelita> ().Boton ();

@@ -39,6 +39,14 @@ public class DetectNPCMama : MonoBehaviour {
 
 	}
 
+	public void Atras(){
+		if (actualNPC) {
+			actualNPC.GetComponent<msgMama> ().ButtonAtras ();
+			string msg = actualNPC.GetComponent<msgMama> ().GetMsg ();
+			msgText.text = msg;
+		}
+	}
+
 	public void Boton(){
 		if(actualNPC){
 			actualNPC.GetComponent<msgMama> ().Boton ();

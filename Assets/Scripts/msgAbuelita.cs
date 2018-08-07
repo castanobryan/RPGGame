@@ -7,6 +7,9 @@ public class msgAbuelita : MonoBehaviour {
 	[SerializeField] GameObject msgPanel;
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
+	[SerializeField] GameObject BotonAtras;
+	[SerializeField] GameObject Prota;
+	[SerializeField] GameObject Abuelita;
 	private AudioSource AudioPlayer;
 	public AudioClip Win;
 
@@ -30,6 +33,16 @@ public class msgAbuelita : MonoBehaviour {
 	public void Boton(){
 		//do {
 		index++;
+		BotonAtras.SetActive (true);
+
+		if (index % 2 == 0) {
+			Prota.SetActive (true);
+			Abuelita.SetActive (false);
+		} else {
+			Prota.SetActive (false);
+			Abuelita.SetActive (true);
+		}
+
 		if (index == 17) {
 			//msgPanel.SetActive (false);
 			AudioPlayer.clip = Win;
@@ -37,10 +50,31 @@ public class msgAbuelita : MonoBehaviour {
 			Destroy (Barrera);
 			Destroy (Collider);
 			Destroy (msgPanel);
+			Destroy (BotonAtras);
 
 		}
 
 		//} while (index<=27);
+
+	}
+
+	public void ButtonAtras(){
+		index--;
+
+		if (index % 2 == 0) {
+			Prota.SetActive (true);
+			Abuelita.SetActive (false);
+		} else {
+			Prota.SetActive (false);
+			Abuelita.SetActive (true);
+		}
+
+		if (index > 0) {
+			BotonAtras.SetActive (true);
+		} else {
+			BotonAtras.SetActive (false);
+		}
+
 
 	}
 }
