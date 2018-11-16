@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Area.cs" />
      <Compile Include="Assets\Scripts\Attack.cs" />
      <Compile Include="Assets\Scripts\Aura.cs" />
@@ -63,6 +64,16 @@
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\FadeScene.cs" />
      <Compile Include="Assets\Scripts\FixDepth.cs" />
+     <Compile Include="Assets\Scripts\HistTelling1.cs" />
+     <Compile Include="Assets\Scripts\HistTelling10.cs" />
+     <Compile Include="Assets\Scripts\HistTelling2.cs" />
+     <Compile Include="Assets\Scripts\HistTelling3.cs" />
+     <Compile Include="Assets\Scripts\HistTelling4.cs" />
+     <Compile Include="Assets\Scripts\HistTelling5.cs" />
+     <Compile Include="Assets\Scripts\HistTelling6.cs" />
+     <Compile Include="Assets\Scripts\HistTelling7.cs" />
+     <Compile Include="Assets\Scripts\HistTelling8.cs" />
+     <Compile Include="Assets\Scripts\HistTelling9.cs" />
      <Compile Include="Assets\Scripts\LoadLevel.cs" />
      <Compile Include="Assets\Scripts\MainCamera.cs" />
      <Compile Include="Assets\Scripts\PassMsgNPC.cs" />

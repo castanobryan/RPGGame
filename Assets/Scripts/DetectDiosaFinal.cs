@@ -47,4 +47,12 @@ public class DetectDiosaFinal : MonoBehaviour {
 		}
 	}
 
+	public void Atras(){
+		if (actualNPC) {
+			actualNPC.GetComponent<msgDiosaFinal> ().ButtonAtras ();
+			string msg = actualNPC.GetComponent<msgDiosaFinal> ().GetMsg ();
+			msgText.text = msg;
+		}
+	}
+
 }

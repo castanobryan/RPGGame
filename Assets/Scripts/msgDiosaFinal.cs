@@ -8,6 +8,9 @@ public class msgDiosaFinal : MonoBehaviour {
 	[SerializeField] GameObject msgPanel;
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
+	[SerializeField] GameObject BotonAtras;
+	[SerializeField] GameObject Prota;
+	[SerializeField] GameObject Diosa;
 
 	int index = 0;
 	public string[] msg;
@@ -28,7 +31,21 @@ public class msgDiosaFinal : MonoBehaviour {
 	public void Boton(){
 		//do {
 		index++;
-		if (index == 3) {
+		BotonAtras.SetActive (true);
+		if (index == 1) {
+			Prota.SetActive (false);
+			Diosa.SetActive (true);
+		} else if (index == 2) {
+			Prota.SetActive (true);
+			Diosa.SetActive (false);
+		} else if (index == 3 || index == 4) {
+			Prota.SetActive (false);
+			Diosa.SetActive (true);
+		} else if (index == 5) {
+			Prota.SetActive (false);
+			Diosa.SetActive (true);
+		}
+		if (index == 6) {
 			//msgPanel.SetActive (false);
 			Destroy (Barrera);
 			Destroy (Collider);
@@ -38,6 +55,34 @@ public class msgDiosaFinal : MonoBehaviour {
 		}
 
 		//} while (index<=27);
+
+	}
+
+	public void ButtonAtras(){
+		index--;
+		if (index == 0) {
+			Prota.SetActive (true);
+			Diosa.SetActive (false);
+		}
+		if (index == 1) {
+			Prota.SetActive (false);
+			Diosa.SetActive (true);
+		} else if (index == 2) {
+			Prota.SetActive (true);
+			Diosa.SetActive (false);
+		} else if (index == 3 || index == 4) {
+			Prota.SetActive (false);
+			Diosa.SetActive (true);
+		} else if (index == 5) {
+			Prota.SetActive (false);
+			Diosa.SetActive (true);
+		}
+		if (index > 0) {
+			BotonAtras.SetActive (true);
+		} else {
+			BotonAtras.SetActive (false);
+		}
+
 
 	}
 }
