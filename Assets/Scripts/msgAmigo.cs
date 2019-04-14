@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class msgAmigo : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class msgAmigo : MonoBehaviour {
 	[SerializeField] GameObject BotonAtras;
 	[SerializeField] GameObject Amigo;
 	[SerializeField] GameObject Prota;
+	[SerializeField] Text Texto;
 
 	int index = 0;
 	public string[] msg;
@@ -33,13 +35,16 @@ public class msgAmigo : MonoBehaviour {
 		//do {
 		index++;
 		BotonAtras.SetActive (true);
+		Texto.alignment = TextAnchor.UpperLeft;
 
 		if (index % 2 == 0) {
 			Prota.SetActive (true);
 			Amigo.SetActive (false);
+			Texto.alignment = TextAnchor.UpperLeft;
 		} else {
 			Prota.SetActive (false);
 			Amigo.SetActive (true);
+			Texto.alignment = TextAnchor.UpperRight;
 		}
 
 		if (index == 12) {
@@ -58,13 +63,16 @@ public class msgAmigo : MonoBehaviour {
 
 	public void ButtonAtras(){
 		index--;
+		Texto.alignment = TextAnchor.UpperLeft;
 
 		if (index % 2 == 0) {
 			Prota.SetActive (true);
 			Amigo.SetActive (false);
+			Texto.alignment = TextAnchor.UpperLeft;
 		} else {
 			Prota.SetActive (false);
 			Amigo.SetActive (true);
+			Texto.alignment = TextAnchor.UpperRight;
 		}
 
 		if (index > 0) {

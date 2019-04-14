@@ -46,17 +46,17 @@ public class DetectNPX : MonoBehaviour {
 
 	}
 
-	public void Boton(){
+	public void NextDialog(){
 		if(actualNPC){
-			actualNPC.GetComponent<msgNPC> ().Boton ();
+			actualNPC.GetComponent<msgNPC> ().Next ();
 			string msg = actualNPC.GetComponent<msgNPC> ().GetMsg();
 			msgText.text = msg;
 		}
 	}
 
-	public void Atras(){
+	public void PrevDialog(){
 		if (actualNPC) {
-			actualNPC.GetComponent<msgNPC> ().ButtonAtras ();
+			actualNPC.GetComponent<msgNPC> ().Preview ();
 			string msg = actualNPC.GetComponent<msgNPC> ().GetMsg ();
 			msgText.text = msg;
 		}

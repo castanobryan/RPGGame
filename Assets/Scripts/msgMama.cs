@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class msgMama : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class msgMama : MonoBehaviour {
 	[SerializeField] GameObject Mama;
 	[SerializeField] GameObject Prota;
 	//[SerializeField] GameObject msgComplete;
+	[SerializeField] Text Texto;
 
 	int index = 0;
 	public string[] msg;
@@ -32,13 +34,17 @@ public class msgMama : MonoBehaviour {
 		//do {
 		index++;
 		BotonAtras.SetActive (true);
+		Texto.alignment = TextAnchor.UpperLeft;
+
 
 		if (index % 2 == 0) {
 			Prota.SetActive (true);
 			Mama.SetActive (false);
+			Texto.alignment = TextAnchor.UpperLeft;
 		} else {
 			Prota.SetActive (false);
 			Mama.SetActive (true);
+			Texto.alignment = TextAnchor.UpperRight;
 		}
 
 		if (index == 22) {
@@ -55,13 +61,16 @@ public class msgMama : MonoBehaviour {
 
 	public void ButtonAtras(){
 		index--;
+		Texto.alignment = TextAnchor.UpperLeft;
 
 		if (index % 2 == 0) {
 			Prota.SetActive (true);
 			Mama.SetActive (false);
+			Texto.alignment = TextAnchor.UpperLeft;
 		} else {
 			Prota.SetActive (false);
 			Mama.SetActive (true);
+			Texto.alignment = TextAnchor.UpperRight;
 		}
 
 		if (index > 0) {

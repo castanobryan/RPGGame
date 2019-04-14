@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class msgAbuelita : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class msgAbuelita : MonoBehaviour {
 	[SerializeField] GameObject BotonAtras;
 	[SerializeField] GameObject Prota;
 	[SerializeField] GameObject Abuelita;
+	[SerializeField] Text Texto;
 	private AudioSource AudioPlayer;
 	public AudioClip Win;
 
@@ -34,13 +36,16 @@ public class msgAbuelita : MonoBehaviour {
 		//do {
 		index++;
 		BotonAtras.SetActive (true);
+		Texto.alignment = TextAnchor.UpperLeft;
 
 		if (index % 2 == 0) {
 			Prota.SetActive (true);
 			Abuelita.SetActive (false);
+			Texto.alignment = TextAnchor.UpperLeft;
 		} else {
 			Prota.SetActive (false);
 			Abuelita.SetActive (true);
+			Texto.alignment = TextAnchor.UpperRight;
 		}
 
 		if (index == 17) {
@@ -60,13 +65,16 @@ public class msgAbuelita : MonoBehaviour {
 
 	public void ButtonAtras(){
 		index--;
+		Texto.alignment = TextAnchor.UpperLeft;
 
 		if (index % 2 == 0) {
 			Prota.SetActive (true);
 			Abuelita.SetActive (false);
+			Texto.alignment = TextAnchor.UpperLeft;
 		} else {
 			Prota.SetActive (false);
 			Abuelita.SetActive (true);
+			Texto.alignment = TextAnchor.UpperRight;
 		}
 
 		if (index > 0) {

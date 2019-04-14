@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class msgPlomer : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class msgPlomer : MonoBehaviour {
 	[SerializeField] GameObject BotonAtras;
 	[SerializeField] GameObject Plomer;
 	[SerializeField] GameObject Prota;
+	[SerializeField] Text Texto;
 
 	int index = 0;
 	public string[] msg;
@@ -31,13 +33,16 @@ public class msgPlomer : MonoBehaviour {
 		//do {
 		index++;
 		BotonAtras.SetActive (true);
+		Texto.alignment = TextAnchor.UpperLeft;
 
 		if (index % 2 == 0) {
 			Prota.SetActive (true);
 			Plomer.SetActive (false);
+			Texto.alignment = TextAnchor.UpperLeft;
 		} else {
 			Prota.SetActive (false);
 			Plomer.SetActive (true);
+			Texto.alignment = TextAnchor.UpperRight;
 		}
 
 		if (index == 14) {
@@ -54,13 +59,16 @@ public class msgPlomer : MonoBehaviour {
 
 	public void ButtonAtras(){
 		index--;
+		Texto.alignment = TextAnchor.UpperLeft;
 
 		if (index % 2 == 0) {
 			Prota.SetActive (true);
 			Plomer.SetActive (false);
+			Texto.alignment = TextAnchor.UpperLeft;
 		} else {
 			Prota.SetActive (false);
 			Plomer.SetActive (true);
+			Texto.alignment = TextAnchor.UpperRight;
 		}
 
 		if (index > 0) {

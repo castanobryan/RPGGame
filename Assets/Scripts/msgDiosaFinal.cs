@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class msgDiosaFinal : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class msgDiosaFinal : MonoBehaviour {
 	[SerializeField] GameObject BotonAtras;
 	[SerializeField] GameObject Prota;
 	[SerializeField] GameObject Diosa;
+	[SerializeField] Text Texto;
 
 	int index = 0;
 	public string[] msg;
@@ -32,19 +34,18 @@ public class msgDiosaFinal : MonoBehaviour {
 		//do {
 		index++;
 		BotonAtras.SetActive (true);
-		if (index == 1) {
-			Prota.SetActive (false);
-			Diosa.SetActive (true);
-		} else if (index == 2) {
+		Texto.alignment = TextAnchor.UpperLeft;
+
+		if (index == 2 || index == 5) {
 			Prota.SetActive (true);
 			Diosa.SetActive (false);
-		} else if (index == 3 || index == 4) {
+			Texto.alignment = TextAnchor.UpperLeft;
+		} else if (index == 1 || index == 3 || index == 4) {
 			Prota.SetActive (false);
 			Diosa.SetActive (true);
-		} else if (index == 5) {
-			Prota.SetActive (false);
-			Diosa.SetActive (true);
-		}
+			Texto.alignment = TextAnchor.UpperRight;
+		} 
+	
 		if (index == 6) {
 			//msgPanel.SetActive (false);
 			Destroy (Barrera);
@@ -60,23 +61,22 @@ public class msgDiosaFinal : MonoBehaviour {
 
 	public void ButtonAtras(){
 		index--;
+		Texto.alignment = TextAnchor.UpperLeft;
 		if (index == 0) {
 			Prota.SetActive (true);
 			Diosa.SetActive (false);
+			Texto.alignment = TextAnchor.UpperLeft;
 		}
-		if (index == 1) {
+		if (index == 1 || index == 3 || index == 4) {
 			Prota.SetActive (false);
 			Diosa.SetActive (true);
-		} else if (index == 2) {
+			Texto.alignment = TextAnchor.UpperRight;
+		} else if (index == 2 || index == 5) {
 			Prota.SetActive (true);
 			Diosa.SetActive (false);
-		} else if (index == 3 || index == 4) {
-			Prota.SetActive (false);
-			Diosa.SetActive (true);
-		} else if (index == 5) {
-			Prota.SetActive (false);
-			Diosa.SetActive (true);
-		}
+			Texto.alignment = TextAnchor.UpperLeft;
+		} 
+
 		if (index > 0) {
 			BotonAtras.SetActive (true);
 		} else {

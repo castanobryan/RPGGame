@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class msgNPC : MonoBehaviour {
 
@@ -8,16 +9,20 @@ public class msgNPC : MonoBehaviour {
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
 	[SerializeField] GameObject BotonAtras;
-	[SerializeField] GameObject Prota;
+	[SerializeField] GameObject BotonSiguiente;
+	[SerializeField] GameObject BotonObjective;
+	[SerializeField] GameObject PanelObjective;
+ 	[SerializeField] GameObject Prota;
 	[SerializeField] GameObject Diosa;
 	[SerializeField] GameObject Unknown;
+	[SerializeField] Text Texto;
+
 
 	int index = 0;
 	public string[] msg;
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -29,52 +34,74 @@ public class msgNPC : MonoBehaviour {
 			return msg [index];
 	}
 
-	public void Boton(){
-		//do {
+	public void Next(){
 		index++;
 		BotonAtras.SetActive (true);
-
+		Texto.alignment = TextAnchor.UpperLeft;
 		if (index == 1) {
 			Prota.SetActive (true);
 			Unknown.SetActive (false);
+			Texto.alignment = TextAnchor.UpperRight;
 		} else if (index == 2 || index == 4 || index == 5 || index == 6 || index == 7 || index == 8 || index == 10 || index == 11 || index == 13 || index == 15 || index == 16 || index == 18 || index == 20 || index == 21 || index == 23 || index == 24) {
 			Prota.SetActive (false);
 			Diosa.SetActive (true);
-		} else if (index == 3 || index == 9 || index == 12 || index == 14 || index == 17 || index == 19 || index == 22 || index == 25) {
+			Texto.alignment = TextAnchor.UpperLeft;
+		} else if (index == 3 || index == 9 || index == 12 || index == 14 || index == 17 || index == 19 || index == 22) {
 			Prota.SetActive (true);
 			Diosa.SetActive (false);
-		} 
+			Texto.alignment = TextAnchor.UpperRight;
+		}
 
-
+		if (index == 25) {
+			BotonSiguiente.SetActive (false);
+			BotonObjective.SetActive (true);
+			Prota.SetActive (true);
+			Diosa.SetActive (false);
+			Texto.alignment = TextAnchor.UpperRight;
+		}
 
 		if (index == 26) {
-			//msgPanel.SetActive (false);
 			Destroy (Barrera);
 			Destroy (Collider);
 			Destroy (msgPanel);
 			Destroy (BotonAtras);
 
-		}
-		//} while (index<=27);
-	}
 
-	public void ButtonAtras(){
+
+
+		}
+	}
+		
+
+	public void Preview(){
 		index--;
 		if (index == 0) {
 			Prota.SetActive (false);
 			Unknown.SetActive (true);
+			Texto.alignment = TextAnchor.UpperLeft;
 		}
 		if (index == 1) {
 			Prota.SetActive (true);
 			Unknown.SetActive (false);
 			Diosa.SetActive (false);
-		} else if (index == 2 || index == 4 || index == 5 || index == 6 || index == 7 || index == 8 || index == 10 || index == 11 || index == 13 || index == 15 || index == 16 || index == 18 || index == 20 || index == 21 || index == 23 || index == 24) {
+			Texto.alignment = TextAnchor.UpperRight;
+		} else if (index == 2 || index == 4 || index == 5 || index == 6 || index == 7 || index == 8 || index == 10 || index == 11 || index == 13 || index == 15 || index == 16 || index == 18 || index == 20 || index == 21 || index == 23) {
 			Prota.SetActive (false);
 			Diosa.SetActive (true);
+			Texto.alignment = TextAnchor.UpperLeft;
 		} else if (index == 3 || index == 9 || index == 12 || index == 14 || index == 17 || index == 19 || index == 22 || index == 25) {
 			Prota.SetActive (true);
 			Diosa.SetActive (false);
+			Texto.alignment = TextAnchor.UpperRight;
 		} 
+
+		if (index == 24) {
+			BotonObjective.SetActive (false);
+			BotonSiguiente.SetActive (true);
+			Prota.SetActive (false);
+			Diosa.SetActive (true);
+			Texto.alignment = TextAnchor.UpperLeft;
+		}
 		if (index > 0) {
 			BotonAtras.SetActive (true);
 		} else {
