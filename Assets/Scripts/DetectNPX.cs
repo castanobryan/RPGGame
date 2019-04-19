@@ -8,7 +8,6 @@ public class DetectNPX : MonoBehaviour {
 	[SerializeField] GameObject msgPanel;
 	[SerializeField] Text msgText;
 	[SerializeField] Button btn;
-
 	GameObject actualNPC;
 
 	// Use this for initialization

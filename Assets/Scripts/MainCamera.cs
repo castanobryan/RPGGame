@@ -8,7 +8,6 @@ public class MainCamera : MonoBehaviour {
 
 	Transform target;
 	float tLX, tLY, bRX, bRY;
-	Vector2 velocity; // necesario para el suavizado de cámara
 
 	void Awake () { 
 		target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -16,7 +15,7 @@ public class MainCamera : MonoBehaviour {
 
 	void Update () {
 		transform.position = new Vector3(
-			Mathf.Clamp(target.position.x,tLX,bRX),
+			Mathf.Clamp(target.position.x,tLX+2,bRX-2),
 			Mathf.Clamp(target.position.y,bRY,tLY),
 			transform.position.z
 		);

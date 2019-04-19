@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour {
 	public float visionRadius;
 	public float attackRadius;
 	public float speed;
+	int EnemyCounter = 0;
+	[SerializeField] GameObject Barrier;
 
 	// Variables relacionadas con el ataque
 	[Tooltip("Prefab de la roca que se disparará")]
@@ -132,7 +134,14 @@ public class Enemy : MonoBehaviour {
 
 	///--- Gestión del ataque, restamos una vida
 	public void Attacked(){
-		if (--hp <= 0) Destroy(gameObject);
+		if (--hp <= 0) {
+			Destroy(gameObject);
+			EnemyCounter++;
+
+			if (EnemyCounter == 9) {
+				Destroy (Barrier);
+			}
+		} 
 
 	}
 

@@ -15,7 +15,9 @@ public class msgNPC : MonoBehaviour {
  	[SerializeField] GameObject Prota;
 	[SerializeField] GameObject Diosa;
 	[SerializeField] GameObject Unknown;
+	[SerializeField] GameObject PanelClosed;
 	[SerializeField] Text Texto;
+	Vector2 mov;
 
 
 	int index = 0;
@@ -23,6 +25,7 @@ public class msgNPC : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 	}
 	
 	// Update is called once per frame
@@ -39,6 +42,7 @@ public class msgNPC : MonoBehaviour {
 		BotonAtras.SetActive (true);
 		Texto.alignment = TextAnchor.UpperLeft;
 		if (index == 1) {
+			mov = Vector2.zero;
 			Prota.SetActive (true);
 			Unknown.SetActive (false);
 			Texto.alignment = TextAnchor.UpperRight;
@@ -65,6 +69,7 @@ public class msgNPC : MonoBehaviour {
 			Destroy (Collider);
 			Destroy (msgPanel);
 			Destroy (BotonAtras);
+			Destroy (PanelClosed);
 
 
 

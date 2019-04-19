@@ -13,7 +13,6 @@ public class Player : MonoBehaviour {
 	public AudioClip SwordCharge;
 	public AudioClip SwordSlash;
 	private AudioSource AudioPlayer;
-
 	Animator anim;
 	Rigidbody2D rb2d;
 	Vector2 mov;  // Ahora es visible entre los métodos
@@ -120,14 +119,14 @@ public class Player : MonoBehaviour {
 		bool charging = stateInfo.IsName("p_slash");
 
 		// Ataque a distancia
-		if (Input.GetKeyDown(KeyCode.F)){ 
+		if (Input.GetKeyDown(KeyCode.R)){ 
 			anim.SetTrigger("charging");
 			aura.AuraStart();
 
 			AudioPlayer.clip = SwordCharge;
 			AudioPlayer.Play ();
 			AudioPlayer.loop = true;
-		} else if (Input.GetKeyUp(KeyCode.F)){ 
+		} else if (Input.GetKeyUp(KeyCode.R)){ 
 			AudioPlayer.loop = false;
 			anim.SetTrigger("attacking");
 			if (aura.IsLoaded()) {
@@ -165,6 +164,8 @@ public class Player : MonoBehaviour {
 			mov = Vector2.zero;
 		}
 	}
+
+
 
 	IEnumerator EnableMovementAfter(float seconds){
 		yield return new WaitForSeconds(seconds);

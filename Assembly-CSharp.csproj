@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BajaConfirmada.cs" />
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Area.cs" />
      <Compile Include="Assets\Scripts\Attack.cs" />
@@ -79,10 +80,12 @@
      <Compile Include="Assets\Scripts\LoadLevel.cs" />
      <Compile Include="Assets\Scripts\MainCamera.cs" />
      <Compile Include="Assets\Scripts\PassMsgNPC.cs" />
+     <Compile Include="Assets\Scripts\PassTalkTam.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\ReloadInicio.cs" />
      <Compile Include="Assets\Scripts\Slash.cs" />
      <Compile Include="Assets\Scripts\Warping.cs" />
+     <Compile Include="Assets\Scripts\closedscript.cs" />
      <Compile Include="Assets\Scripts\msgAbuelita.cs" />
      <Compile Include="Assets\Scripts\msgAmigo.cs" />
      <Compile Include="Assets\Scripts\msgDiosa2.cs" />
@@ -111,6 +114,8 @@
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileObject.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
+     <Compile Include="Assets\blackbars.cs" />
+     <Compile Include="Assets\controls.cs" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth-Instanced.shader" />
      <None Include="Assets\Tiled2Unity\Imported\f3.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDefault.shader" />

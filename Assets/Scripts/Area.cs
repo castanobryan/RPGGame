@@ -15,7 +15,9 @@ public class Area : MonoBehaviour {
 		anim.Play("text_area_show");
 		transform.GetChild(0).GetComponent<Text>().text = name;
 		transform.GetChild(1).GetComponent<Text>().text = name;
-		yield return new WaitForSeconds(1f);
+		transform.GetChild(2).GetComponent<Text>().text = name;
+		transform.GetChild(3).GetComponent<Text>().text = name;
+		yield return new WaitForSeconds(2f);
 		anim.Play("text_area_fadeout");
 	}
 }

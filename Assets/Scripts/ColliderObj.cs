@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColliderObj : MonoBehaviour {
 	//[SerializeField] GameObject PanelObj;
 	Animator anim;
+	[SerializeField] GameObject Collider_Obj;
 
 	// Use this for initialization
 	void Start () {
@@ -16,15 +17,18 @@ public class ColliderObj : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
-		
-		anim.Play ("obj_main");
-
-		//PanelObj.SetActive (true);
+	public IEnumerator TEST(){
+		yield return new WaitForSeconds (5);
+		Destroy (Collider_Obj);
 	}
 
-	/*void OnTriggerExit2D(Collider2D other){
-		anim.SetBool ("Active", false);
-	}*/
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.tag == "Player") {
+			anim.Play ("obj_main");
+			StartCoroutine (TEST ());
+		}
+	}
+
+
 }
 
