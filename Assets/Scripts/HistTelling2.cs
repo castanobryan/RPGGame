@@ -8,11 +8,13 @@ public class HistTelling2 : MonoBehaviour{
 	public GameObject Next;
 	public GameObject Prev;
 	public GameObject Trigger;
+	public GameObject Draw;
 
 	// Use this for initialization
 	void Start ()
 	{
 		TextoPanel.SetActive (false);
+		Draw.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -22,7 +24,7 @@ public class HistTelling2 : MonoBehaviour{
 	}
 
 	void OnTriggerEnter2D (Collider2D other){
-
+		Draw.SetActive (true);
 		TextoPanel.SetActive (true);
 
 	}
@@ -30,10 +32,8 @@ public class HistTelling2 : MonoBehaviour{
 
 
 	void OnTriggerExit2D (Collider2D other){
-
 		Next.SetActive (true);
 		Prev.SetActive (true);
-
 	}
 
 	public void ClickNext2(){
@@ -42,6 +42,7 @@ public class HistTelling2 : MonoBehaviour{
 		Next.SetActive (false);
 		Prev.SetActive (false);
 		TextoPanel.SetActive (false);
+		Draw.SetActive (false);
 	}
 
 	public void ClickPrev2(){
@@ -49,6 +50,7 @@ public class HistTelling2 : MonoBehaviour{
 		Next.SetActive (false);
 		Prev.SetActive (false);
 		TextoPanel.SetActive (false);
+		Draw.SetActive (false);
 	}
 
 }

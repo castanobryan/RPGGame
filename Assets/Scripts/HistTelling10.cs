@@ -9,12 +9,14 @@ public class HistTelling10 : MonoBehaviour{
 	public GameObject Next;
 	public GameObject Prev;
 	public GameObject Trigger;
+	public GameObject Draw;
 
 	private string SceneGameplay = "1";
 
 	// Use this for initialization
 	void Start ()
 	{
+		Draw.SetActive (false);
 		TextoPanel.SetActive (false);
 	}
 
@@ -25,7 +27,7 @@ public class HistTelling10 : MonoBehaviour{
 	}
 
 	void OnTriggerEnter2D (Collider2D other){
-
+		Draw.SetActive (true);
 		TextoPanel.SetActive (true);
 
 	}
@@ -49,6 +51,7 @@ public class HistTelling10 : MonoBehaviour{
 		Next.SetActive (false);
 		Prev.SetActive (false);
 		TextoPanel.SetActive (false);
+		Draw.SetActive (false);
 	}
 
 }

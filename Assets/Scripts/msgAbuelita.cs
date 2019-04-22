@@ -9,17 +9,16 @@ public class msgAbuelita : MonoBehaviour {
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
 	[SerializeField] GameObject BotonAtras;
+	[SerializeField] GameObject BotonPreTrophy;
+	[SerializeField] GameObject BotonTrophy;
 	[SerializeField] GameObject Prota;
 	[SerializeField] GameObject Abuelita;
 	[SerializeField] Text Texto;
-	private AudioSource AudioPlayer;
-	public AudioClip Win;
 
 	int index = 0;
 	public string[] msg;
 	// Use this for initialization
 	void Start () {
-		AudioPlayer = GetComponent<AudioSource> ();
 
 	}
 
@@ -48,10 +47,16 @@ public class msgAbuelita : MonoBehaviour {
 			Texto.alignment = TextAnchor.UpperRight;
 		}
 
+		if (index == 16) {
+			BotonPreTrophy.SetActive (false);
+			BotonTrophy.SetActive (true);
+			Abuelita.SetActive (true);
+			Prota.SetActive (false);
+			Texto.alignment = TextAnchor.UpperRight;
+		}
+
 		if (index == 17) {
 			//msgPanel.SetActive (false);
-			AudioPlayer.clip = Win;
-			AudioPlayer.Play ();
 			Destroy (Barrera);
 			Destroy (Collider);
 			Destroy (msgPanel);
@@ -75,6 +80,14 @@ public class msgAbuelita : MonoBehaviour {
 			Prota.SetActive (false);
 			Abuelita.SetActive (true);
 			Texto.alignment = TextAnchor.UpperRight;
+		}
+
+		if (index == 15) {
+			BotonTrophy.SetActive (false);
+			BotonPreTrophy.SetActive (true);
+			Abuelita.SetActive (false);
+			Prota.SetActive (true);
+			Texto.alignment = TextAnchor.UpperLeft;
 		}
 
 		if (index > 0) {

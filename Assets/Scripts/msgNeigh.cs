@@ -9,6 +9,8 @@ public class msgNeigh : MonoBehaviour {
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
 	[SerializeField] GameObject BotonAtras;
+	[SerializeField] GameObject BotonPreTrophy;
+	[SerializeField] GameObject BotonTrophy;
 	[SerializeField] GameObject Prota;
 	[SerializeField] GameObject Neigh;
 	[SerializeField] Text Texto;
@@ -45,6 +47,14 @@ public class msgNeigh : MonoBehaviour {
 			Texto.alignment = TextAnchor.UpperRight;
 		}
 
+		if (index == 11) {
+			BotonPreTrophy.SetActive (false);
+			BotonTrophy.SetActive (true);
+			Neigh.SetActive (true);
+			Prota.SetActive (false);
+			Texto.alignment = TextAnchor.UpperRight;
+		}
+
 		if (index == 12) {
 			//msgPanel.SetActive (false);
 			Destroy (Barrera);
@@ -70,6 +80,14 @@ public class msgNeigh : MonoBehaviour {
 			Prota.SetActive (false);
 			Neigh.SetActive (true);
 			Texto.alignment = TextAnchor.UpperRight;
+		}
+
+		if (index == 10) {
+			BotonTrophy.SetActive (false);
+			BotonPreTrophy.SetActive (true);
+			Neigh.SetActive (false);
+			Prota.SetActive (true);
+			Texto.alignment = TextAnchor.UpperLeft;
 		}
 
 		if (index > 0) {

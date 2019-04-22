@@ -11,6 +11,8 @@ public class msgAmigo : MonoBehaviour {
 	[SerializeField] GameObject NPC;
 	[SerializeField] GameObject Anim;
 	[SerializeField] GameObject BotonAtras;
+	[SerializeField] GameObject BotonPreTrophy;
+	[SerializeField] GameObject BotonTrophy;
 	[SerializeField] GameObject Amigo;
 	[SerializeField] GameObject Prota;
 	[SerializeField] Text Texto;
@@ -47,6 +49,14 @@ public class msgAmigo : MonoBehaviour {
 			Texto.alignment = TextAnchor.UpperRight;
 		}
 
+		if (index == 11) {
+			BotonPreTrophy.SetActive (false);
+			BotonTrophy.SetActive (true);
+			Amigo.SetActive (true);
+			Prota.SetActive (false);
+			Texto.alignment = TextAnchor.UpperRight;
+		}
+
 		if (index == 12) {
 			//msgPanel.SetActive (false);
 			Destroy (Barrera);
@@ -73,6 +83,14 @@ public class msgAmigo : MonoBehaviour {
 			Prota.SetActive (false);
 			Amigo.SetActive (true);
 			Texto.alignment = TextAnchor.UpperRight;
+		}
+
+		if (index == 10) {
+			BotonTrophy.SetActive (false);
+			BotonPreTrophy.SetActive (true);
+			Amigo.SetActive (false);
+			Prota.SetActive (true);
+			Texto.alignment = TextAnchor.UpperLeft;
 		}
 
 		if (index > 0) {

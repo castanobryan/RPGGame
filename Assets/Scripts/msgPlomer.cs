@@ -9,6 +9,8 @@ public class msgPlomer : MonoBehaviour {
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
 	[SerializeField] GameObject BotonAtras;
+	[SerializeField] GameObject BotonPreTrophy;
+	[SerializeField] GameObject BotonTrophy;
 	[SerializeField] GameObject Plomer;
 	[SerializeField] GameObject Prota;
 	[SerializeField] Text Texto;
@@ -44,6 +46,13 @@ public class msgPlomer : MonoBehaviour {
 			Plomer.SetActive (true);
 			Texto.alignment = TextAnchor.UpperRight;
 		}
+		if (index == 13) {
+			BotonPreTrophy.SetActive (false);
+			BotonTrophy.SetActive (true);
+			Plomer.SetActive (true);
+			Prota.SetActive (false);
+			Texto.alignment = TextAnchor.UpperRight;
+		}
 
 		if (index == 14) {
 			//msgPanel.SetActive (false);
@@ -69,6 +78,14 @@ public class msgPlomer : MonoBehaviour {
 			Prota.SetActive (false);
 			Plomer.SetActive (true);
 			Texto.alignment = TextAnchor.UpperRight;
+		}
+
+		if (index == 12) {
+			BotonTrophy.SetActive (false);
+			BotonPreTrophy.SetActive (true);
+			Plomer.SetActive (false);
+			Prota.SetActive (true);
+			Texto.alignment = TextAnchor.UpperLeft;
 		}
 
 		if (index > 0) {

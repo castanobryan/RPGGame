@@ -8,10 +8,12 @@ public class HistTelling4 : MonoBehaviour{
 	public GameObject Next;
 	public GameObject Prev;
 	public GameObject Trigger;
+	public GameObject Draw;
 
 	// Use this for initialization
 	void Start ()
 	{
+		Draw.SetActive (false);
 		TextoPanel.SetActive (false);
 	}
 
@@ -22,7 +24,7 @@ public class HistTelling4 : MonoBehaviour{
 	}
 
 	void OnTriggerEnter2D (Collider2D other){
-
+		Draw.SetActive (true);
 		TextoPanel.SetActive (true);
 
 	}
@@ -42,6 +44,7 @@ public class HistTelling4 : MonoBehaviour{
 		Next.SetActive (false);
 		Prev.SetActive (false);
 		TextoPanel.SetActive (false);
+		Draw.SetActive (false);
 	}
 
 	public void ClickPrev4(){
@@ -49,6 +52,7 @@ public class HistTelling4 : MonoBehaviour{
 		Next.SetActive (false);
 		Prev.SetActive (false);
 		TextoPanel.SetActive (false);
+		Draw.SetActive (false);
 	}
 
 }

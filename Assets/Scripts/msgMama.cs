@@ -9,9 +9,10 @@ public class msgMama : MonoBehaviour {
 	[SerializeField] GameObject Barrera;
 	[SerializeField] GameObject Collider;
 	[SerializeField] GameObject BotonAtras;
+	[SerializeField] GameObject BotonPreTrophy;
+	[SerializeField] GameObject BotonTrophy;
 	[SerializeField] GameObject Mama;
 	[SerializeField] GameObject Prota;
-	//[SerializeField] GameObject msgComplete;
 	[SerializeField] Text Texto;
 
 	int index = 0;
@@ -47,6 +48,14 @@ public class msgMama : MonoBehaviour {
 			Texto.alignment = TextAnchor.UpperRight;
 		}
 
+		if (index == 21) {
+			BotonPreTrophy.SetActive (false);
+			BotonTrophy.SetActive (true);
+			Mama.SetActive (true);
+			Prota.SetActive (false);
+			Texto.alignment = TextAnchor.UpperRight;
+		}
+
 		if (index == 22) {
 			//msgPanel.SetActive (false);
 			Destroy (Barrera);
@@ -71,6 +80,14 @@ public class msgMama : MonoBehaviour {
 			Prota.SetActive (false);
 			Mama.SetActive (true);
 			Texto.alignment = TextAnchor.UpperRight;
+		}
+
+		if (index == 20) {
+			BotonTrophy.SetActive (false);
+			BotonPreTrophy.SetActive (true);
+			Mama.SetActive (false);
+			Prota.SetActive (true);
+			Texto.alignment = TextAnchor.UpperLeft;
 		}
 
 		if (index > 0) {
