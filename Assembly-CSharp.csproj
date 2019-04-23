@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\BarAnimate.cs" />
      <Compile Include="Assets\Scripts\CinematicaInicio.cs" />
      <Compile Include="Assets\Scripts\ColliderObj.cs" />
+     <Compile Include="Assets\Scripts\CreditsToMenu.cs" />
      <Compile Include="Assets\Scripts\DetectAbuelita.cs" />
      <Compile Include="Assets\Scripts\DetectAmigo.cs" />
      <Compile Include="Assets\Scripts\DetectDiosa2.cs" />

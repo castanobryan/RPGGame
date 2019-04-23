@@ -23,6 +23,7 @@ void OnTriggerEnter2D(Collider2D other) {
 	public void Creditos(){
 		SceneManager.LoadScene("Credits",LoadSceneMode.Single);
 	}
+		
 
 	public void Volver(){
 		SceneManager.LoadScene ("mAin", LoadSceneMode.Single);

@@ -17,7 +17,7 @@ public class msgNPC : MonoBehaviour {
 	[SerializeField] GameObject Unknown;
 	[SerializeField] GameObject PanelClosed;
 	[SerializeField] Text Texto;
-	Vector2 mov;
+
 
 
 	int index = 0;
@@ -25,7 +25,8 @@ public class msgNPC : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+	
 	}
 	
 	// Update is called once per frame
@@ -37,12 +38,25 @@ public class msgNPC : MonoBehaviour {
 			return msg [index];
 	}
 
+	/*Worked on it for like 1 week it doesn't work well ;-;
+	IEnumerator LetterbyLetter(string txt){
+		int letra = 0;
+		while (letra < txt.Length) {
+			Texto.text += txt [letra];
+			letra += 1;
+			yield return new WaitForSeconds (0.03f);
+		}
+	}
+*/
+
+
 	public void Next(){
+		//StartCoroutine (LetterbyLetter(GetMsg()));
 		index++;
 		BotonAtras.SetActive (true);
 		Texto.alignment = TextAnchor.UpperLeft;
 		if (index == 1) {
-			mov = Vector2.zero;
+
 			Prota.SetActive (true);
 			Unknown.SetActive (false);
 			Texto.alignment = TextAnchor.UpperRight;
